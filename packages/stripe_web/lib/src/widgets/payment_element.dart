@@ -1,5 +1,4 @@
 import 'dart:html';
-import 'dart:ui_web' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -100,10 +99,10 @@ class PaymentElementState extends State<PaymentElement> {
 
     elements = WebStripe.js.elements(createOptions());
     mutationObserver!.observe(document, childList: true, subtree: true);
-    ui.platformViewRegistry.registerViewFactory(
-      'stripe_payment_element',
-      (int viewId) => _divElement,
-    );
+    // ui.platformViewRegistry.registerViewFactory(
+    //   'stripe_payment_element',
+    //   (int viewId) => _divElement,
+    // );
 
     super.initState();
   }
